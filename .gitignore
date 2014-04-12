@@ -1,9 +1,0 @@
-# Unity ignore files
-/Temp
-/obj
-/library
-*.csproj
-*.unityproj
-*.sln
-*.userprefs
-.DS_Store
