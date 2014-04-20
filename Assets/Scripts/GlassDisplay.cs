@@ -43,8 +43,8 @@ public class GlassDisplay : MonoBehaviour {
 		int myX = Screen.width - (width / 2 + 5);
 		int myY = height / 2 - 5;
 		GUI.DrawTexture (new Rect (myX, myY, 10, 10), dot);
-		float cacheXoff = targetCache.transform.position.x - this.transform.position.x;
-		float cacheYoff = targetCache.transform.position.z - this.transform.position.z;
+		float cacheXoff = (targetCache.transform.position.x - this.transform.position.x) * 0.5f;
+		float cacheYoff = (targetCache.transform.position.z - this.transform.position.z) * 0.5f;
 		float rotCacheXoff = cacheXoff * Mathf.Cos (rot) - cacheYoff * Mathf.Sin (rot);
 		float rotCacheYoff = cacheXoff * Mathf.Sin (rot) + cacheYoff * Mathf.Cos (rot);
 		if (myX + rotCacheXoff > Screen.width - width && myY - rotCacheYoff < height - 10) {
