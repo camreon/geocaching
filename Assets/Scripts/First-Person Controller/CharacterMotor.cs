@@ -524,6 +524,11 @@ public class CharacterMotor : MonoBehaviour
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
+		// sends notification to object with CollisionAudioHandlerExample.cs attached
+		//		Debug.Log ( hit.gameObject.name + " was hit");
+		hit.gameObject.SendMessage("OnCharacterCollision", hit.transform.position, 
+		                           SendMessageOptions.DontRequireReceiver);
+
         if(hit.normal.y > 0 && hit.normal.y > groundNormal.y && hit.moveDirection.y < 0)
         {
             if((hit.point - movement.lastHitPoint).sqrMagnitude > 0.001 || lastGroundNormal == Vector3.zero)
