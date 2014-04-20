@@ -15,6 +15,8 @@ public class CharacterSounds : MonoBehaviour {
 	public AudioClip jump;
 	public AudioClip land;
 	public AudioClip fall;
+	public AudioClip inWalk;
+	public AudioClip outWalk;
 	
 	CharacterMotor motor; //our character motor
 	
@@ -62,5 +64,15 @@ public class CharacterSounds : MonoBehaviour {
 		
 		audio.PlayOneShot(land, volumeScale);
 		
+	}
+
+	void OnWalk()
+	{
+		audio.Play();
+	}
+	
+	void OffWalk() 
+	{
+		audio.Stop();
 	}
 }

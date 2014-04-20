@@ -46,5 +46,13 @@ public class FPSInputController : MonoBehaviour
         // Apply the direction to the CharacterMotor
         motor.inputMoveDirection = transform.rotation * directionVector;
         motor.inputJump = Input.GetButton("Jump");
+		
+		// play walking fx when held down and stop on release
+		if (Input.GetKeyDown("up") || Input.GetKeyDown(KeyCode.W)) {
+			SendMessage("OnWalk", SendMessageOptions.DontRequireReceiver);
+		}
+		if (Input.GetKeyUp("up") || Input.GetKeyUp(KeyCode.W)) { 
+			SendMessage("OffWalk", SendMessageOptions.DontRequireReceiver);
+		}
     }
 }
