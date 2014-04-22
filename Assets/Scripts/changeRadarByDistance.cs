@@ -7,6 +7,7 @@ public class changeRadarByDistance : MonoBehaviour
 	public AudioClip radar;
 	float blipPause = 3.0f;
 	float distance = 80.0f;
+	float newVolume = .5f;
 
 	public GameObject cacheA;
 	public GameObject cacheB;
@@ -30,6 +31,7 @@ public class changeRadarByDistance : MonoBehaviour
 		while (true) {
 			// start playing at a start time
 			audio.PlayOneShot(radar);
+			audio.volume = newVolume;
 
 			yield return new WaitForSeconds(blipPause);
 		}
@@ -37,12 +39,15 @@ public class changeRadarByDistance : MonoBehaviour
 
 	void Update()
 	{
-		// get distance between cache and player
-		distance = Vector3.Distance(this.transform.position, targetCache.transform.position);
-		
 		// blip frequency changes based on distance 
-		blipPause = 5.0f * Mathf.InverseLerp(10, 150, distance);
+		distance = Vector3.Distance(this.transform.position, targetCache.transform.position);
+		blipPause = 4.0f * Mathf.InverseLerp(0, 150, distance);
+		// TODO set minimum pause OR notify & disable when close enough
 
+		// blip volume increases if player is looking in the direction the cache
+		newVolume = Vector3.Angle(this.transform.forward, targetCache.transform.position - this.transform.position);
+		newVolume = 1.0f - Mathf.InverseLerp(0, 160, newVolume);
+	
 		// change target cache
 		if (Input.GetKeyDown (KeyCode.A)) {
 			cacheI = (cacheI + 1) % NUM_CACHES;
