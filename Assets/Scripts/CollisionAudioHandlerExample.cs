@@ -31,6 +31,7 @@ public class CollisionAudioHandlerExample : MonoBehaviour {
 		
 		GameObject go = new GameObject();
 		go.transform.parent = transform;
+		go.transform.position = go.transform.parent.position;
 		go.name = "Collision-" + gameObject.name;
 		audioSource = go.AddComponent<AudioSource>();
 		audioSource.clip = collisionSound;

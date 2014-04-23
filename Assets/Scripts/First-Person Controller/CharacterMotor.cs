@@ -15,6 +15,7 @@ public class CharacterMotor : MonoBehaviour
     // Does this script currently respond to input?
     bool canControl = true;
     bool useFixedUpdate = true;
+	float pushPower = 15.0f;
 
     // For the next variables, [System.NonSerialized] tells Unity to not serialize the variable or show it in the inspector view.
     // Very handy for organization!
@@ -540,6 +541,17 @@ public class CharacterMotor : MonoBehaviour
             movement.hitPoint = hit.point;
             movement.frameVelocity = Vector3.zero;
         }
+
+		// move rocks you hit
+		Rigidbody body = hit.collider.attachedRigidbody;
+		if (body == null || body.isKinematic)
+			return;
+		
+		if (hit.moveDirection.y < -0.3F)
+			return;
+		
+		Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
+		body.velocity = pushDir * pushPower;
     }
 
     private IEnumerator SubtractNewPlatformVelocity()

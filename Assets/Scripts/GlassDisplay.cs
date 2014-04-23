@@ -15,7 +15,8 @@ public class GlassDisplay : MonoBehaviour {
 	GameObject targetCache;
 	int cacheI = 0;
 	int NUM_CACHES = 2;
-	bool glassOn = true; 
+	bool glassOn = true;
+	public int size = 5;
 
 	// Use this for initialization
 	void Start () {
@@ -29,7 +30,7 @@ public class GlassDisplay : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.A)) {
+		if (Input.GetKeyDown (KeyCode.P)) {
 			cacheI = (cacheI + 1) % NUM_CACHES;
 			targetCache = caches[cacheI];
 		}
@@ -41,7 +42,8 @@ public class GlassDisplay : MonoBehaviour {
 	// Updates once per frame also
 	void OnGUI () {
 		if (glassOn) {
-			GUI.Box (new Rect (leftMost, topMost, width, height), "\"A\": Switch target cache \n \"O\": Toggle display");
+//			GUI.skin.label.fontSize = size;
+			GUI.Box (new Rect (leftMost, topMost, width, height), "<size=12> \"P\": Switch target cache \n \"O\": Toggle display </size>");
 
 			// draw player and target cache on radar
 			float rot = this.transform.eulerAngles.y * 2 * Mathf.PI / 360;
