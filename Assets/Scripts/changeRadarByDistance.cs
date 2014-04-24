@@ -4,8 +4,7 @@ using System.Collections;
 
 public class changeRadarByDistance : MonoBehaviour
 {
-	public AudioClip radar;
-	public AudioClip ding;
+	public AudioClip radar, ding, easy_hint, difficult_hint;
 	public float cacheProximity = 30.0f;
 	float blipPause = 3.0f;
 	float distance = 80.0f;
@@ -49,8 +48,13 @@ public class changeRadarByDistance : MonoBehaviour
 		if (distance < cacheProximity && !isNear) {
 			audio.PlayOneShot(ding);
 			isNear = true;
-			// TODO: read out hints
+			new WaitForSeconds(8); // ???
 
+			// read out hints
+			if (targetCache == cacheA)
+				audio.PlayOneShot(easy_hint);
+			else
+				audio.PlayOneShot(difficult_hint);
 		} 
 		// exit cache area
 		else if (distance > cacheProximity && isNear) {
