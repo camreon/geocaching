@@ -5374,7 +5374,7 @@ Transform:
   m_PrefabInternal: {fileID: 527040764}
   m_GameObject: {fileID: 428353297}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 19.5571747, z: -.818921089}
+  m_LocalPosition: {x: 0, y: 3.84983063, z: -.818921089}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 553702244}
@@ -6251,7 +6251,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 40ce15be3c10348528f36f252bcbc72c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 19.5571747
+      value: 3.84983063
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 40ce15be3c10348528f36f252bcbc72c, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6292,6 +6292,18 @@ Prefab:
     - target: {fileID: 11400002, guid: 40ce15be3c10348528f36f252bcbc72c, type: 2}
       propertyPath: movement.maxBackwardsSpeed
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 40ce15be3c10348528f36f252bcbc72c, type: 2}
+      propertyPath: m_ClearFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 40ce15be3c10348528f36f252bcbc72c, type: 2}
+      propertyPath: orthographic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 40ce15be3c10348528f36f252bcbc72c, type: 2}
+      propertyPath: m_HDR
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40ce15be3c10348528f36f252bcbc72c, type: 2}
@@ -14072,6 +14084,7 @@ GameObject:
   - 124: {fileID: 1133434807}
   - 114: {fileID: 1133434806}
   - 81: {fileID: 1133434805}
+  - 45: {fileID: 1133434810}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -14163,6 +14176,14 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_HDR: 0
   m_OcclusionCulling: 1
+--- !u!45 &1133434810
+Skybox:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1133434803}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 6768e1c8596c94e4a8f8d149211acfa9, type: 2}
 --- !u!1 &1134800325
 GameObject:
   m_ObjectHideFlags: 0
