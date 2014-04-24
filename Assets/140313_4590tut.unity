@@ -5331,7 +5331,7 @@ GameObject:
   - 114: {fileID: 428353306}
   m_Layer: 0
   m_Name: First Person Controller
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6378,6 +6378,10 @@ Prefab:
       propertyPath: m_HDR
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 40ce15be3c10348528f36f252bcbc72c, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40ce15be3c10348528f36f252bcbc72c, type: 2}
   m_RootGameObject: {fileID: 428353297}
@@ -6607,6 +6611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c70b1eea27d2514d9fbfd131f62b8e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   pickUpSound: {fileID: 8300000, guid: 195fff0036c6f9a4188c4b2a9eda85fc, type: 3}
 --- !u!82 &532869287
 AudioSource:
@@ -20590,6 +20595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c70b1eea27d2514d9fbfd131f62b8e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   pickUpSound: {fileID: 8300000, guid: 195fff0036c6f9a4188c4b2a9eda85fc, type: 3}
 --- !u!1 &1613145675
 GameObject:
@@ -25315,6 +25321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c70b1eea27d2514d9fbfd131f62b8e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 428353297}
   pickUpSound: {fileID: 8300000, guid: 195fff0036c6f9a4188c4b2a9eda85fc, type: 3}
 --- !u!82 &1947302976
 AudioSource:
@@ -25394,7 +25401,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1947302974}
   m_LocalRotation: {x: -.707106888, y: 0, z: 0, w: .707106769}
-  m_LocalPosition: {x: 0, y: -0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 1263172698}

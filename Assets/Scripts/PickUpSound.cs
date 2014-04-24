@@ -4,23 +4,24 @@ using System.Collections;
 public class PickUpSound : MonoBehaviour 
 {
 	private bool enter;
+	public AudioClip pickUpSound;
 		
 	void Start()
 	{
 		enter = false;
 	}
 
-	void OnTriggerEnter()
+	void OnTriggerEnter(Collider other)
 	{
-		enter = true;
+		if(other.gameObject.CompareTag("Player"))
+			enter = true;
 	}
 	
 	void OnTriggerExit()
 	{ 
-		enter = false;
+		if(other.gameObject.CompareTag("Player"))
+			enter = false;
 	}
-	
-	public AudioClip pickUpSound;
 	
 	void Update()
 	{

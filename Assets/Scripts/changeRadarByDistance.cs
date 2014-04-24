@@ -46,15 +46,16 @@ public class changeRadarByDistance : MonoBehaviour
 
 		// enter cache area
 		if (distance < cacheProximity && !isNear) {
-			audio.PlayOneShot(ding);
+			//audio.PlayOneShot(ding);
 			isNear = true;
-			new WaitForSeconds(8); // ???
+			 // ???
 
 			// read out hints
 			if (targetCache == cacheA)
 				audio.PlayOneShot(easy_hint);
 			else
 				audio.PlayOneShot(difficult_hint);
+			new WaitForSeconds(8);
 		} 
 		// exit cache area
 		else if (distance > cacheProximity && isNear) {
