@@ -11,6 +11,8 @@ public class GlassDisplay : MonoBehaviour {
 	public Texture2D dot;
 	public GameObject cacheA;
 	public GameObject cacheB;
+	public AudioClip easy_difficulty;
+	public AudioClip hard_difficulty;
 	GameObject[] caches;
 	GameObject targetCache;
 	int cacheI = 0;
@@ -33,6 +35,10 @@ public class GlassDisplay : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.P)) {
 			cacheI = (cacheI + 1) % NUM_CACHES;
 			targetCache = caches[cacheI];
+			if(targetCache == cacheA) //hardcoding cacheA as a 'difficult' cache
+				audio.PlayOneShot(hard_difficulty);
+			if(targetCache == cacheB)
+				audio.PlayOneShot(easy_difficulty);
 		}
 		if (Input.GetKeyDown (KeyCode.O)) {
 			glassOn = !glassOn;
