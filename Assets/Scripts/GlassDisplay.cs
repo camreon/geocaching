@@ -35,9 +35,9 @@ public class GlassDisplay : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.P)) {
 			cacheI = (cacheI + 1) % NUM_CACHES;
 			targetCache = caches[cacheI];
-			if(targetCache == cacheA) //hardcoding cacheA as a 'difficult' cache
+			if(targetCache == cacheB) //hardcoding cacheB as a 'difficult' cache
 				audio.PlayOneShot(hard_difficulty);
-			if(targetCache == cacheB)
+			if(targetCache == cacheA)
 				audio.PlayOneShot(easy_difficulty);
 		}
 		if (Input.GetKeyDown (KeyCode.O)) {
