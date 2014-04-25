@@ -5,6 +5,7 @@ public class PickUpSound : MonoBehaviour
 {
 	private bool enter;
 	public AudioClip pickUpSound;
+	public GameObject parent;
 		
 	void Start()
 	{
@@ -25,8 +26,11 @@ public class PickUpSound : MonoBehaviour
 	
 	void Update()
 	{
-		if(Input.GetKeyUp(KeyCode.T))
-			if (enter)
+		if(Input.GetKeyUp(KeyCode.T)) {
+			if (enter) {
 				audio.PlayOneShot(pickUpSound);
+				parent.renderer.material.color = Color.blue;
+			}
+		}
 	}
 }

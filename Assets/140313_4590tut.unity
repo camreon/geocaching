@@ -4903,6 +4903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickUpSound: {fileID: 8300000, guid: 195fff0036c6f9a4188c4b2a9eda85fc, type: 3}
+  parent: {fileID: 1702327231}
 --- !u!82 &372413856
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5852,6 +5853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickUpSound: {fileID: 8300000, guid: 195fff0036c6f9a4188c4b2a9eda85fc, type: 3}
+  parent: {fileID: 0}
 --- !u!23 &464987261
 Renderer:
   m_ObjectHideFlags: 0
@@ -6823,6 +6825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickUpSound: {fileID: 8300000, guid: 195fff0036c6f9a4188c4b2a9eda85fc, type: 3}
+  parent: {fileID: 1602269294}
 --- !u!82 &532869287
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14518,6 +14521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickUpSound: {fileID: 8300000, guid: 195fff0036c6f9a4188c4b2a9eda85fc, type: 3}
+  parent: {fileID: 0}
 --- !u!23 &1115174054
 Renderer:
   m_ObjectHideFlags: 0
@@ -15751,6 +15755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickUpSound: {fileID: 8300000, guid: 195fff0036c6f9a4188c4b2a9eda85fc, type: 3}
+  parent: {fileID: 1115174052}
 --- !u!82 &1195449309
 AudioSource:
   m_ObjectHideFlags: 0
@@ -18144,6 +18149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickUpSound: {fileID: 8300000, guid: 195fff0036c6f9a4188c4b2a9eda85fc, type: 3}
+  parent: {fileID: 464987258}
 --- !u!82 &1335088690
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21126,7 +21132,6 @@ GameObject:
   - 33: {fileID: 1602269297}
   - 136: {fileID: 1602269296}
   - 23: {fileID: 1602269295}
-  - 114: {fileID: 1602269300}
   m_Layer: 0
   m_Name: Cache_Easy
   m_TagString: Untagged
@@ -21187,18 +21192,6 @@ Transform:
   m_Children:
   - {fileID: 532869288}
   m_Father: {fileID: 0}
---- !u!114 &1602269300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1602269294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c70b1eea27d2514d9fbfd131f62b8e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickUpSound: {fileID: 8300000, guid: 195fff0036c6f9a4188c4b2a9eda85fc, type: 3}
 --- !u!1 &1613145675
 GameObject:
   m_ObjectHideFlags: 0
@@ -25995,6 +25988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickUpSound: {fileID: 8300000, guid: 195fff0036c6f9a4188c4b2a9eda85fc, type: 3}
+  parent: {fileID: 1263172694}
 --- !u!82 &1947302976
 AudioSource:
   m_ObjectHideFlags: 0
