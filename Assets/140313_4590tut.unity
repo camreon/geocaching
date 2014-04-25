@@ -5572,7 +5572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5315a640b97474218868dd2e6fce88ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jump: {fileID: 8300000, guid: ac59b589f273b4a07b83f5136ef6e382, type: 3}
+  jump: {fileID: 0}
   land: {fileID: 8300000, guid: 9b1b79fa1812e4e41a71cd7eeafebcb5, type: 3}
   fall: {fileID: 8300000, guid: 5a98065bf194943e68538ea27c7c7644, type: 3}
   inWalk: {fileID: 8300000, guid: 2f035a8df470a474bbe493c9f7ed66e9, type: 3}

@@ -50,14 +50,11 @@ public class changeRadarByDistance : MonoBehaviour
 	{
 		// blip frequency changes based on distance 
 		distance = Vector3.Distance(this.transform.position, targetCache.transform.position);
-//		print (distance);
 
 		// enter cache area
 		if (distance < cacheProximity && !isNear) {
-			isNear = true;
-
-			// read out hints
 			playHint();
+			isNear = true;
 			new WaitForSeconds(7);
 		} 
 		// exit cache area
@@ -66,12 +63,12 @@ public class changeRadarByDistance : MonoBehaviour
 		}
 		// on the way to cache area
 		else {
-			blipPause = 4.0f * Mathf.InverseLerp(20, 150, distance);
+			blipPause = 3.0f * Mathf.InverseLerp(20, 250, distance);
 		}
 
 		// blip volume increases if player is looking in the direction the cache
 		newVolume = Vector3.Angle(this.transform.forward, targetCache.transform.position - this.transform.position);
-		newVolume = 1.0f - Mathf.InverseLerp(0, 200, newVolume);
+		newVolume = 1.0f - Mathf.InverseLerp(0, 120, newVolume);
 	
 		// change target cache
 		if (Input.GetKeyDown (KeyCode.P)) {
