@@ -11,12 +11,18 @@ public class GlassDisplay : MonoBehaviour {
 	public Texture2D dot;
 	public GameObject cacheA;
 	public GameObject cacheB;
+	public GameObject cacheC;
+	public GameObject cacheD;
+	public GameObject cacheE;
+	public AudioClip very_easy_difficulty;
 	public AudioClip easy_difficulty;
+	public AudioClip medium_difficulty;
 	public AudioClip hard_difficulty;
+	public AudioClip very_hard_difficulty;
 	GameObject[] caches;
 	GameObject targetCache;
 	int cacheI = 0;
-	int NUM_CACHES = 2;
+	int NUM_CACHES = 5;
 	bool glassOn = true;
 	public int size = 5;
 
@@ -27,6 +33,9 @@ public class GlassDisplay : MonoBehaviour {
 		caches = new GameObject[NUM_CACHES];
 		caches[0] = cacheA;
 		caches[1] = cacheB;
+		caches[2] = cacheC;
+		caches[3] = cacheD;
+		caches[4] = cacheE;
 		targetCache = caches[0];
 	}
 	
@@ -35,9 +44,15 @@ public class GlassDisplay : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.P)) {
 			cacheI = (cacheI + 1) % NUM_CACHES;
 			targetCache = caches[cacheI];
-			if(targetCache == cacheB) //hardcoding cacheB as a 'difficult' cache
+			if(targetCache == cacheB) //hardcoding cacheB as a 'very hard' cache
+				audio.PlayOneShot(very_hard_difficulty);
+			else if(targetCache == cacheA) //very easy cache
+				audio.PlayOneShot(very_easy_difficulty);
+			else if(targetCache == cacheC)
+				audio.PlayOneShot(medium_difficulty);
+			else if(targetCache == cacheD)
 				audio.PlayOneShot(hard_difficulty);
-			if(targetCache == cacheA)
+			else if(targetCache == cacheE)
 				audio.PlayOneShot(easy_difficulty);
 		}
 		if (Input.GetKeyDown (KeyCode.O)) {

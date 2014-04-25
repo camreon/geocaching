@@ -17,7 +17,7 @@ public class PickUpSound : MonoBehaviour
 			enter = true;
 	}
 	
-	void OnTriggerExit()
+	void OnTriggerExit(Collider other)
 	{ 
 		if(other.gameObject.CompareTag("Player"))
 			enter = false;
