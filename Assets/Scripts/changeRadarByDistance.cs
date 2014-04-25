@@ -4,6 +4,7 @@ using System.Collections;
 
 public class changeRadarByDistance : MonoBehaviour
 {
+	public GameObject glass;
 	public AudioClip radar, very_easy_hint, easy_hint, medium_hint, hard_hint, very_hard_hint;
 	public float cacheProximity = 30.0f;
 	float blipPause = 3.0f;
@@ -88,14 +89,14 @@ public class changeRadarByDistance : MonoBehaviour
 	
 	void playHint() {
 		if(targetCache == cacheB) //'very hard' cache
-			audio.PlayOneShot(very_hard_hint);
+			glass.audio.PlayOneShot(very_hard_hint);
 		else if(targetCache == cacheA) //very easy cache
-			audio.PlayOneShot(very_easy_hint);
+			glass.audio.PlayOneShot(very_easy_hint);
 		else if(targetCache == cacheC)
-			audio.PlayOneShot(medium_hint);
+			glass.audio.PlayOneShot(medium_hint);
 		else if(targetCache == cacheD)
-			audio.PlayOneShot(hard_hint);
+			glass.audio.PlayOneShot(hard_hint);
 		else if(targetCache == cacheE)
-			audio.PlayOneShot(easy_hint);
+			glass.audio.PlayOneShot(easy_hint);
 	}
 }
