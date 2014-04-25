@@ -63,8 +63,8 @@ public class GlassDisplay : MonoBehaviour {
 	// Updates once per frame also
 	void OnGUI () {
 		if (glassOn) {
-//			GUI.skin.label.fontSize = size;
-			GUI.Box (new Rect (leftMost, topMost, width, height), "<size=12> \"P\": Switch target cache \n \"O\": Toggle display \n \"T\": Pick Up Cache</size>");
+			GUI.Label(new Rect(0, topMost, width, height), "<size=12> \"P\": Switch Target Cache \n \"O\": Toggle Display \n \"T\": Pick Up Cache \n \"H\": Play Hint</size>");
+			GUI.Box (new Rect (leftMost, topMost, width, height), " ");
 
 			// draw player and target cache on radar
 			float rot = this.transform.eulerAngles.y * 2 * Mathf.PI / 360;

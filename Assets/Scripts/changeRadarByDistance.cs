@@ -4,7 +4,7 @@ using System.Collections;
 
 public class changeRadarByDistance : MonoBehaviour
 {
-	public AudioClip radar, ding, easy_hint, difficult_hint;
+	public AudioClip radar, very_easy_hint, easy_hint, medium_hint, hard_hint, very_hard_hint;
 	public float cacheProximity = 30.0f;
 	float blipPause = 3.0f;
 	float distance = 80.0f;
@@ -50,19 +50,15 @@ public class changeRadarByDistance : MonoBehaviour
 	{
 		// blip frequency changes based on distance 
 		distance = Vector3.Distance(this.transform.position, targetCache.transform.position);
+//		print (distance);
 
 		// enter cache area
 		if (distance < cacheProximity && !isNear) {
-			//audio.PlayOneShot(ding);
 			isNear = true;
-			 // ???
 
 			// read out hints
-			if (targetCache == cacheA)
-				audio.PlayOneShot(easy_hint);
-			else
-				audio.PlayOneShot(difficult_hint);
-			new WaitForSeconds(8);
+			playHint();
+			new WaitForSeconds(7);
 		} 
 		// exit cache area
 		else if (distance > cacheProximity && isNear) {
@@ -86,6 +82,23 @@ public class changeRadarByDistance : MonoBehaviour
 			// 	   : distance could be length of the tone
 			//     : difficulty could be pitch
 		}
+
+		// repeat hint if needed with "H"
+		if (Input.GetKeyDown (KeyCode.H)) {
+			playHint();
+		}
 	}
 	
+	void playHint() {
+		if(targetCache == cacheB) //'very hard' cache
+			audio.PlayOneShot(very_hard_hint);
+		else if(targetCache == cacheA) //very easy cache
+			audio.PlayOneShot(very_easy_hint);
+		else if(targetCache == cacheC)
+			audio.PlayOneShot(medium_hint);
+		else if(targetCache == cacheD)
+			audio.PlayOneShot(hard_hint);
+		else if(targetCache == cacheE)
+			audio.PlayOneShot(easy_hint);
+	}
 }

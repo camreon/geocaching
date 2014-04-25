@@ -3601,7 +3601,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 289367605}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.2565689, y: 8.0179863, z: 22.4866943}
+  m_LocalPosition: {x: -22.5215912, y: 8.0179863, z: 24.0653992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 716528198}
@@ -5674,9 +5674,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radar: {fileID: 8300000, guid: 0fdf8058882d7413d8391d5c6b1ba334, type: 3}
-  ding: {fileID: 8300000, guid: 9a503028f51a949c2af9ba7983afe764, type: 3}
+  very_easy_hint: {fileID: 8300000, guid: 19b5986c1a2394d69a942eac032c8789, type: 3}
   easy_hint: {fileID: 8300000, guid: 1411ab54f16d34bb8b0495232e9b148d, type: 3}
-  difficult_hint: {fileID: 8300000, guid: 9c614ff36dae447ee987d2b657b3b362, type: 3}
+  medium_hint: {fileID: 8300000, guid: 83ab3b3b44571498caa399f44ee082eb, type: 3}
+  hard_hint: {fileID: 8300000, guid: 9927d211d8ea84b26ad747d81656e3de, type: 3}
+  very_hard_hint: {fileID: 8300000, guid: 9c614ff36dae447ee987d2b657b3b362, type: 3}
   cacheProximity: 30
   cacheA: {fileID: 1263172694}
   cacheB: {fileID: 464987258}
@@ -5831,7 +5833,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 464987258}
   m_LocalRotation: {x: .707106888, y: 0, z: 0, w: .707106769}
-  m_LocalPosition: {x: -97.2204742, y: 7.78364563, z: 129.827759}
+  m_LocalPosition: {x: -101.0317, y: 7.78364563, z: 134.477081}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
   - {fileID: 1335088691}
@@ -14477,7 +14479,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1115174052}
   m_LocalRotation: {x: .707106888, y: 0, z: 0, w: .707106769}
-  m_LocalPosition: {x: -86.5647888, y: 4.78363991, z: 146.591354}
+  m_LocalPosition: {x: -96.001709, y: 1.43690872, z: 139.22699}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
   - {fileID: 1195449306}
