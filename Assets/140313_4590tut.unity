@@ -5675,11 +5675,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radar: {fileID: 8300000, guid: 0fdf8058882d7413d8391d5c6b1ba334, type: 3}
   ding: {fileID: 8300000, guid: 9a503028f51a949c2af9ba7983afe764, type: 3}
-  easy_hint: {fileID: 0}
-  difficult_hint: {fileID: 0}
+  easy_hint: {fileID: 8300000, guid: 1411ab54f16d34bb8b0495232e9b148d, type: 3}
+  difficult_hint: {fileID: 8300000, guid: 9c614ff36dae447ee987d2b657b3b362, type: 3}
   cacheProximity: 30
   cacheA: {fileID: 1263172694}
-  cacheB: {fileID: 1602269294}
+  cacheB: {fileID: 464987258}
+  cacheC: {fileID: 1702327231}
+  cacheD: {fileID: 1115174052}
+  cacheE: {fileID: 1602269294}
 --- !u!1 &445244700
 GameObject:
   m_ObjectHideFlags: 0

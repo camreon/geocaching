@@ -12,10 +12,13 @@ public class changeRadarByDistance : MonoBehaviour
 
 	public GameObject cacheA;
 	public GameObject cacheB;
+	public GameObject cacheC;
+	public GameObject cacheD;
+	public GameObject cacheE;
 	GameObject[] caches;
 	GameObject targetCache;
 	int cacheI = 0;
-	int NUM_CACHES = 2;
+	int NUM_CACHES = 5;
 	bool isNear = false; 
 	
 	void Start() 
@@ -25,6 +28,10 @@ public class changeRadarByDistance : MonoBehaviour
 		caches = new GameObject[NUM_CACHES];
 		caches[0] = cacheA;
 		caches[1] = cacheB;
+		caches[2] = cacheC;
+		caches[3] = cacheD;
+		caches[4] = cacheE;
+
 		targetCache = caches[0];
 	}
 	
